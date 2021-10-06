@@ -5,6 +5,5 @@
 class Square:
     """defines object by size"""
 
- 
     def __init__(self, size):
         self.__size = size
