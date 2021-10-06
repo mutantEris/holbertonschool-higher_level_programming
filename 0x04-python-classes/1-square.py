@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines shape with four equal sides"""
+"""module used to create class square"""
 
 
 class Square:
