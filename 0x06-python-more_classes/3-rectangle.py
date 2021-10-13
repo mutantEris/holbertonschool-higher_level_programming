@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 """
 behold my rectangle
 """
@@ -76,6 +76,7 @@ class Rectangle:
             if y is self.height - 2:
                 stringly += "#" * self.width
         return stringly
+
     def __repr__(self):
         """
         shows bigfulness of rectangle
