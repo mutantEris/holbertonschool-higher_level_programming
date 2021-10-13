@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 """
 behold my rectangle
 """
@@ -68,10 +68,10 @@ class Rectangle:
         """
         stringly bingly
         """
-        if self.width == 0 or self.height== 0:
+        if self.width == 0 or self.height == 0:
             return""
         stringly = ""
-        for y in range (self.height - 1):
+        for y in range(self.height - 1):
             stringly += "#" * self.width + "\n"
             if y is self.height - 2:
                 stringly += "#" * self.width
