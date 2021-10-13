@@ -52,7 +52,8 @@ class Rectangle:
         """
         how big it be
         """
-        return self.height * self.width
+        area = self.height * self.width
+        return area
 
     def perimeter(self):
         """
