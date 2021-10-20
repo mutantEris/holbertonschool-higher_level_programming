@@ -17,11 +17,43 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
+        for row in range(self.y):
+            print()
         for row in range(self.height):
+            for column in range(self.x):
+                print(" ", end="")
             for column in range(self.width):
                 print("#", end="")
             print()
 
+    def update(self, *args, **kwargs):
+        """update"""
+        numbarg=0
+        if args:
+            for arg in args:
+                numbarg+=1
+                if numbarg == 1:
+                    self.id = arg
+                if numbarg == 2:
+                    self.width = arg
+                if numbarg == 3:
+                    self.height = arg
+                if numbarg == 4:
+                    self.x = arg
+                if numbarg == 5:
+                    self.y = arg
+        elif kwargs:
+            for arg in kwargs.keys():
+                if arg == "id":
+                    self.id = kwargs.get(arg)
+                if arg == "width":
+                    self.width = kwargs.get(arg)
+                if arg == "height":
+                    self.height = kwargs.get(arg)
+                if arg == "x":
+                    self.x = kwargs.get(arg)
+                if arg == "y":
+                    self.y =kwargs.get(arg)
     @property
     def height(self):
         """height"""
@@ -77,3 +109,8 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError('y must be >= 0')
         self.__y=y
+
+    def __str__(self):
+        """stringle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
