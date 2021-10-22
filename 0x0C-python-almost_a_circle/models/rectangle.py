@@ -114,3 +114,13 @@ class Rectangle(Base):
         """stringle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def to_dictionary(self):
+        mobydict = {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+            }
+        return mobydict
