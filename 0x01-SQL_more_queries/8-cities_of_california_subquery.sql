@@ -1,2 +1,2 @@
 -- Lists California
-SELECT cities.id, cities.name FROM hbtn_0d_usa.cities, hbtn_0d_usa.states WHERE states.name = California ORDER BY ASC; 
+SELECT cities.id, cities.name FROM cities, states WHERE cities.states_id = states.id AND states.name = 'California' ORDER BY cities.id ASC; 
