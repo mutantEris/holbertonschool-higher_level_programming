@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument"""
+"""takes an argument & displays all values where name matches the argument"""
 
 
 import MySQLdb
@@ -12,13 +12,12 @@ if __name__ == "__main__":
                          user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3])
-    statename=sys.argv[4]
+    statename = sys.argv[4]
 
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states \
-    WHERE states.name LIKE '{}' ORDER BY id ASC".format(statename))
+    WHERE states.name LIKE BINARY '{}' ORDER BY id ASC".format(statename))
     for row in cursor.fetchall():
         print(row)
     cursor.close()
     db.close()
-        
