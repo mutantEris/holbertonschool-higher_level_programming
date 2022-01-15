@@ -11,10 +11,10 @@ request(process.argv[2], function (error, response, body) {
 
     for (let x = 0; x < list.length; x++) {
       if (list[x].completed) {
-        if (toDidList[list[x].user_id]) {
-          toDidList[list[x].user_id]++;
+        if (toDidList[list[x].userId]) {
+          toDidList[list[x].userId]++;
         } else {
-          toDidList[list[x].user_id] = 1;
+          toDidList[list[x].userId] = 1;
         }
       }
     }
