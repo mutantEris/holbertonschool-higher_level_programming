@@ -9,7 +9,7 @@ class Rectangle(BaseGeometry):
     """This is the greatest rectangle"""
     def __init__(self, width, height):
         """Becometh Rectangle"""
-        super().integer_validator(width)
-        super().integer_validator(height)
-        _width = width
-        _height = height
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self._width = width
+        self._height = height
