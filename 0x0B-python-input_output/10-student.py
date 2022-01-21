@@ -10,13 +10,13 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-        def to_json(self, attrs=None):
-            """retrieves dictionary"""
-            if attrs is None or type(attrs) is not list:
-                return self.__dict__
-            else:
-                my_dict = {}
-                for x in self.__dict__:
-                    if x in attrs:
-                        my_dict[x] = self.__dict__[x]
-                return my_dict
+    def to_json(self, attrs=None):
+        """retrieves dictionary"""
+        if attrs is None or type(attrs) is not list:
+            return self.__dict__
+        else:
+            my_dict = {}
+            for x in self.__dict__:
+                if x in attrs:
+                    my_dict[x] = self.__dict__[x]
+            return my_dict
