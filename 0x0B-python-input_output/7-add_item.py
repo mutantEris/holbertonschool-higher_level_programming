@@ -4,8 +4,8 @@
 
 import json
 from sys import argv
-save_to_json_file = import('5-save_to_json_file.py').save_to_json_file
-load_from_json_file = import('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 def load_add_save():
@@ -15,7 +15,7 @@ def load_add_save():
     except Exception:
         my_list = []
     my_list += argv[1:]
-    save_to_json_file(mylist, 'add_item.json')
+    save_to_json_file(my_list, 'add_item.json')
 
 
 if __name__ == "__main__":
