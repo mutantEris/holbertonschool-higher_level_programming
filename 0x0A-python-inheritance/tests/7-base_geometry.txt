@@ -1,0 +1,42 @@
+# 7 Tests
+
+     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("value", 7)
+     
+# Test Case
+
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+     >>> bg.integer_validator("value", 0)
+     Traceback (most recent call last):
+     ...
+     ValueError: value must be greater than 0
+
+     >>> bg.integer_validator("str", "zero")
+     Traceback (most recent call last):
+     ...
+     TypeError: str must be an integer
+
+     >>> bg.integer_validator("decimal", 0.1)
+     Traceback (most recent call last):
+     ...
+     TypeError: decimal must be an integer
+
+     >>> bg.integer_validator("list", [1, 2])
+     Traceback (most recent call last):
+     ...
+     TypeError: list must be an integer
+     
+     >>> bg.integer_validator("lists", (1, 2))
+     Traceback (most recent call last):
+     ...
+     TypeError: lists must be an integer
+
+     >>> bg.integer_validator("Ndecimal", -0.1)
+     Traceback (most recent call last):
+     ...
+     TypeError: Ndecimal must be an integer
