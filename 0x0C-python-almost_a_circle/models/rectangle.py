@@ -77,7 +77,11 @@ class Rectangle(Base):
 
     def display(self):
         """displays the shape"""
+        for row in range(self.y):
+            print("")
         for row in range(self.height):
+            for column in range(self.x):
+                print(" ", end="")
             for column in range(self.width):
                 print("#", end="")
             print("")
