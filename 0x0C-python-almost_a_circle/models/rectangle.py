@@ -76,4 +76,11 @@ class Rectangle(Base):
     def area(self):
         """the area of the squarea"""
         return self.height * self.width
-        
+
+    def display(self):
+        """displays the shape"""
+
+    def __str__(self):
+        """overridden str method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
