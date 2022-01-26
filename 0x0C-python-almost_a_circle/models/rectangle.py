@@ -2,8 +2,6 @@
 """rectangle class"""
 
 
-from re import X
-from turtle import window_height
 from models.base import Base
 
 
@@ -79,6 +77,10 @@ class Rectangle(Base):
 
     def display(self):
         """displays the shape"""
+        for row in range(self.height):
+            for column in range(self.width):
+                print("#", end="")
+            print("")
 
     def __str__(self):
         """overridden str method"""
