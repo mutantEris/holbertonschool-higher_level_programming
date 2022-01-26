@@ -41,3 +41,8 @@ class Square(Rectangle):
         elif kwargs:
             for arg in kwargs:
                 setattr(self, arg, kwargs[arg])
+
+    def to_dictionary(self):
+        """a regular shaped dictionary"""
+        g = {"id": self.id, "size": self.width,"x": self.x, "y": self.y}
+        return g
