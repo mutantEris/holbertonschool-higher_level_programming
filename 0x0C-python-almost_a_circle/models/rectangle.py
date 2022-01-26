@@ -104,6 +104,7 @@ class Rectangle(Base):
                 setattr(self, arg, kwargs[arg])
 
     def to_dictionary(self):
+        """a square dictionary"""
         g = {"id": self.id, "width": self.width, "height": self.height,
              "x": self.x, "y": self.y}
         return g
