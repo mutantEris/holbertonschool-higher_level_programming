@@ -90,3 +90,15 @@ class Rectangle(Base):
         """overridden str method"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """changes values of variables"""
+        id = ["id", "width", "height", "x", "y"]
+        g = 0
+        if args:
+            for arg in args:
+                setattr(self, id[g], args[g])
+                g += 1
+        elif kwargs:
+            for arg in kwargs:
+                setattr(self, arg, kwargs[arg])
