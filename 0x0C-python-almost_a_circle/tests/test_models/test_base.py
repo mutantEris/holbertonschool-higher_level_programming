@@ -18,9 +18,9 @@ class BaseTest(unittest.TestCase):
 
     def test_ids(self):
         """stringles"""
-        b1 = Base(r)
-        self.assertEqual()
-
+        b1 = Base(15)
+        self.assertEqual(b1.id, 15)
+        b2 = Base(None)      
 
     if __name__ == '__main__':
         unittest.main()
