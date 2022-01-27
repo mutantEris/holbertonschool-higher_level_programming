@@ -26,7 +26,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
         """saves to file"""
         thelist = []
