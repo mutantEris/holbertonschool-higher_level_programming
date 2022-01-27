@@ -19,8 +19,14 @@ class BaseTest(unittest.TestCase):
     def test_ids(self):
         """stringles"""
         b1 = Base(15)
-        self.assertEqual(b1.id, 15)
-        b2 = Base(None)      
+        self.assertEqual(b1.id, 15)  
 
+    def test_base_to_json(self):
+        """base to json"""
+        b1 = Base(1)
+        self.assertEqual(b1.to_json_string(None), '[]')
+        self.assertEqual(b1.to_json_string([]), '[]')
+    
+        
     if __name__ == '__main__':
         unittest.main()
