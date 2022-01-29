@@ -36,3 +36,12 @@ class Base:
                 thelist.append(cls.to_dictionary(x))
         with open(saves, 'w') as f:
             f.write(cls.to_json_string(thelist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        aDict = json.loads(json_string)
+        """to_json_string but instead no"""
+        if json_string is None or json_string == []:
+            return "[]"
+        else:
+            return aDict
