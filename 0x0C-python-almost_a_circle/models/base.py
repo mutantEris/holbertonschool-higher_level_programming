@@ -51,7 +51,7 @@ class Base:
         """creation class method"""
         return dictionary
 
-    classmethod
+    @classmethod
     def load_from_file(cls):
         """files to instances"""
         if cls is None:
