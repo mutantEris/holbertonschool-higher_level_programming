@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test file for base"""
+"""test file for rectangle"""
 
 
 import unittest
