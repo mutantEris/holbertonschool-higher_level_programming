@@ -45,3 +45,16 @@ class Base:
             return "[]"
         else:
             return aDict
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creation class method"""
+        return dictionary
+
+    classmethod
+    def load_from_file(cls):
+        """files to instances"""
+        if cls is None:
+            return "[]"
+        else:
+            return cls
